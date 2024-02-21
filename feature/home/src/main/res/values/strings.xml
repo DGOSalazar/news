@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txt_title_home">Most popular articles!</string>
+    <string name="logo_img">https://jaydixit.com/wordpress/wp-content/uploads/new-york-times-logo-png-transparent.png</string>
+    <string name="generic_img">https://chicagocaresdpp.org/wp-content/uploads/2022/08/Screen-Shot-2022-08-01-at-2.33.55-PM-290x300.png</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_full_post">See the full post:</string>
+</resources>
