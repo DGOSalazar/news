@@ -1,4 +1,4 @@
-# news
+# Articles from New York Times
 Prueba tecnica 
 
 **Objetivo Genneral:**
@@ -15,15 +15,18 @@ Para este reto solo se crearon 2 fragmentos dentro del feature home, los cuales 
 Ambos solo cuentan con los colores blanco y negro para seguir la estetica de un periodico por exepcion del status bar.
 Para el diseño se opto por un listado recomendado por Google, donde los elementos se muestran en CardsView con interacciones, dando solo un resumen del titulo, el abstract y la imagen del articulo, en caso de no contener imagen, se muestra una generica.
 
-HomeFragment:    
+HomeFragment:   
+
 <img width="515" alt="image" src="https://github.com/DGOSalazar/news/assets/99159921/a5b57edc-f31c-4fe6-a3ed-d414290bf663">
 
 Para la pantalla de detalle, se obto por seguir la estetica de la pagina web, haciendo alucion a una portada de periodico, en esta imagen tomamos la de mayo resolución.
 DetailFragment:
+
 <img width="515" alt="image" src="https://github.com/DGOSalazar/news/assets/99159921/7bafc4a3-1b4e-4329-ade0-fd8eebdabbce">
 
 
 De igual manera se realizo la implementacion de una base de datos con Room para almacenar lo obtenio del api, la cual se consume la primera vez que se abre la app, y se almacenan hasta que la app se desinstala.
+Finalmente se generaron pruebas unitarias para el Repositorio y el caso de uso principal.
 
 
 
