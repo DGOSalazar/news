@@ -11,9 +11,10 @@
             android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/min_margin"
+            android:layout_margin="@dimen/regular_margin"
             android:src="@drawable/icon_back"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_title"
+            app:layout_constraintBottom_toBottomOf="@id/iv_title"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <ImageView
@@ -21,22 +22,23 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/height_logo"
             android:layout_marginEnd="@dimen/height_logo"
-            app:layout_constraintTop_toTopOf="@id/iv_back"
-            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            android:layout_marginTop="@dimen/regular_margin"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/iv_back"
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Hello this is the most epic Article"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_title_detail"
-            android:layout_margin="@dimen/regular_margin"
+            android:layout_marginVertical="@dimen/regular_margin"
+            android:layout_marginHorizontal="@dimen/max_margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            app:layout_constraintTop_toBottomOf="@id/iv_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -45,15 +47,16 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black"
-            android:layout_margin="@dimen/regular_margin"
-            android:layout_marginHorizontal="@dimen/min_margin"
+            android:layout_marginTop="@dimen/regular_margin"
+            android:layout_marginHorizontal="@dimen/regular_margin"
             app:layout_constraintTop_toBottomOf="@id/tv_title"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/id_extra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/regular_margin"
+            android:layout_marginVertical="@dimen/min_margin"
+            android:layout_marginHorizontal="@dimen/max_margin"
             app:layout_constraintTop_toBottomOf="@id/v_one">
             <TextView
                 android:id="@+id/tv_by_line"
@@ -88,10 +91,10 @@
         <View
             android:id="@+id/v_two"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:background="@color/black"
-            android:layout_margin="@dimen/regular_margin"
-            android:layout_marginHorizontal="@dimen/min_margin"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginHorizontal="@dimen/regular_margin"
             app:layout_constraintTop_toBottomOf="@id/id_extra"/>
         <TextView
             android:id="@+id/tv_abstract"
@@ -99,24 +102,19 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/dimen_title"
             android:textColor="@color/black"
-            android:layout_margin="@dimen/regular_margin"
+            android:layout_margin="@dimen/max_margin"
             app:layout_constraintTop_toBottomOf="@id/v_two"
+            app:layout_constraintBottom_toTopOf="@id/cl_view_p"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="this is an abstraction of the principal quote, maybe this doesnt say anithing but it is the final objetive for the star wars starships, commandend for obi wan kenoby and all that things..."/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
             android:id="@+id/cl_view_p"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_view_pager"
             android:layout_margin="@dimen/regular_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_abstract">
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/vp_images"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/regular_margin"
-                tools:layout_editor_absoluteX="1dp"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@id/tv_abstract"
+            app:layout_constraintBottom_toTopOf="@id/tv_hyper_title"/>
 
         <TextView
             android:id="@+id/tv_hyper_title"
@@ -128,6 +126,7 @@
             android:textSize="@dimen/sub_title"
             android:layout_margin="@dimen/regular_margin"
             app:layout_constraintTop_toBottomOf="@id/cl_view_p"
+            app:layout_constraintBottom_toTopOf="@id/tv_hyper"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
@@ -138,8 +137,8 @@
             android:textSize="@dimen/sub_title"
             tools:text="www.gotothePost.com"
             android:gravity="center"
-            android:layout_marginVertical="@dimen/min_margin"
-            app:layout_constraintTop_toBottomOf="@id/tv_hyper_title"
+            android:layout_marginVertical="@dimen/regular_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,9 @@ object Versions {
     const val junit = "4.13.2"
     const val espresso = "3.5.1"
     const val extJunit = "1.1.5"
+    const val mockito = "1.12.2"
+    const val coroutineTest = "1.6.0"
+    const val coreTesting = "2.1.0"
 
     /** Network **/
 

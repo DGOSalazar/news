@@ -9,6 +9,7 @@ import com.raven.home.R
 import com.raven.home.databinding.ItemArticleBinding
 import com.raven.home.domain.models.Article
 import com.raven.home.utils.glide
+import com.raven.home.utils.short
 
 class ArticlesAdapter(
     private var listArticles: List<Article> = listOf(),
@@ -26,18 +27,15 @@ class ArticlesAdapter(
                     context.getString(R.string.generic_img)
                 else article[n].media[0].photos[0].url
             mBinding.apply {
-                tvTitle.text = shortText(article[n].title, 20)
-                tvAbstract.text = shortText(article[n].abstract, 60)
+                tvTitle.text = article[n].title.short(16)
+                tvAbstract.text = article[n].abstract.short(55)
                 ivArticle.glide(img)
-                tvByLine.text = shortText(article[n].byLine, 20)
+                tvByLine.text = article[n].byLine.short(20)
                 root.setOnClickListener {
                     click(article[n])
                 }
             }
         }
-
-        private fun shortText(text: String, length: Int) =
-            if(text.length > length) "${text.substring(0, length)}..." else text
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterViewHolder {

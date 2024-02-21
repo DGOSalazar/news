@@ -8,12 +8,12 @@ import com.raven.home.data.database.entities.ArticleEntity
 
 @Dao
 interface Dao {
-    @Query("SELECT * FROM articles_table")
-    fun getGovernmentInstitutions():List<ArticleEntity>
+    @Query("SELECT * FROM articles_table_complete")
+    fun getArticles():List<ArticleEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertGovernmentInstitutions(governmentInstitutions: List<ArticleEntity>)
+    fun insertArticles(articles: List<ArticleEntity>)
 
-    @Query("DELETE FROM articles_table")
-    fun deleteGovernmentInstitutions()
+    @Query("DELETE FROM articles_table_complete")
+    fun deleteArticles()
 }

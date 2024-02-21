@@ -11,5 +11,6 @@
     <dimen name="height_img_size">100dp</dimen>
     <dimen name="width_img_size">102dp</dimen>
     <dimen name="height_logo">40dp</dimen>
-    <dimen name="height_view_pager">200dp</dimen>
+    <dimen name="height_view_pager">250dp</dimen>
+    <dimen name="max_margin">32dp</dimen>
 </resources>

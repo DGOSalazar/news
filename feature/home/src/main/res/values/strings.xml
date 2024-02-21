@@ -6,4 +6,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_full_post">See the full post:</string>
+    <string name="connection_restored">Connection Restored</string>
+    <string name="connection_lost">Connection Lost</string>
+    <string name="deep_link_fragment_detailed">android-app://feature.com.app/articleDetailFragment</string>
+    <string name="something_is_wrong_try_later">something is wrong, try later</string>
+    <string name="without_internet">without internet</string>
 </resources>

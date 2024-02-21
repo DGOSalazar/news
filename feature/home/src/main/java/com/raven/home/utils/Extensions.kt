@@ -14,3 +14,6 @@ fun ImageView.glide(url: String) {
 fun Context.toast(text: String) {
     Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
 }
+
+fun String.short(length: Int) =
+    if(this.length > length) "${this.substring(0, length)}..." else this

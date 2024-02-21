@@ -1,4 +1,4 @@
-package com.raven.home.data.remote.models
+package com.raven.home.utils
 
 class Resource<T> (
     val status: Status,

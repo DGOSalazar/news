@@ -19,7 +19,8 @@ object DatabaseModule {
     @Singleton
     @Provides
     fun provideRoom(@ApplicationContext context: Context) =
-        Room.databaseBuilder(context, Database::class.java, DATABASE_NAME).build()
+        Room.databaseBuilder(context, Database::class.java, DATABASE_NAME)
+            .addMigrations(Database.MIGRATION_1_2).build()
 
     @Singleton
     @Provides

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/home_nav">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/articleDetailsFragment">
+        <fragment
+            android:id="@+id/articleDetailsFragment"
+            android:name="com.raven.home.presentation.view.ArticleDetailsFragment"
+            android:label="ArticleDetailsFragment" >
+            <deepLink
+                app:uri="android-app://feature.com.app/articleDetailFragment" />
+        </fragment>
 </navigation>
